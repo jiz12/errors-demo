@@ -1,0 +1,32 @@
+--------------------------------------------------------------------------------------
+2021/07/25 11:18:44 
+请求地址:/api/v1/login/user/find
+请求方式:GET
+请求ip:127.0.0.1
+
+sql: no rows in result set
+用户id:-1
+errors_demo/login.findUserInfoById
+	D:/码云项目golang/errors_demo/login/view.go:48
+errors_demo/login.userFind
+	D:/码云项目golang/errors_demo/login/view.go:22
+github.com/gin-gonic/gin.(*Context).Next
+	C:/Users/Administrator/go/pkg/mod/github.com/gin-gonic/gin@v1.7.2/context.go:165
+github.com/gin-gonic/gin.CustomRecoveryWithWriter.func1
+	C:/Users/Administrator/go/pkg/mod/github.com/gin-gonic/gin@v1.7.2/recovery.go:99
+github.com/gin-gonic/gin.(*Context).Next
+	C:/Users/Administrator/go/pkg/mod/github.com/gin-gonic/gin@v1.7.2/context.go:165
+github.com/gin-gonic/gin.LoggerWithConfig.func1
+	C:/Users/Administrator/go/pkg/mod/github.com/gin-gonic/gin@v1.7.2/logger.go:241
+github.com/gin-gonic/gin.(*Context).Next
+	C:/Users/Administrator/go/pkg/mod/github.com/gin-gonic/gin@v1.7.2/context.go:165
+github.com/gin-gonic/gin.(*Engine).handleHTTPRequest
+	C:/Users/Administrator/go/pkg/mod/github.com/gin-gonic/gin@v1.7.2/gin.go:489
+github.com/gin-gonic/gin.(*Engine).ServeHTTP
+	C:/Users/Administrator/go/pkg/mod/github.com/gin-gonic/gin@v1.7.2/gin.go:445
+net/http.serverHandler.ServeHTTP
+	D:/Go/src/net/http/server.go:2887
+net/http.(*conn).serve
+	D:/Go/src/net/http/server.go:1952
+runtime.goexit
+	D:/Go/src/runtime/asm_amd64.s:1371
