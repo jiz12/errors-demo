@@ -1,6 +1,7 @@
 package login
 
 import (
+	"database/sql"
 	"errors_demo/log"
 	"github.com/gin-gonic/gin"
 	"github.com/pkg/errors"
@@ -23,8 +24,20 @@ func userFind(c *gin.Context){
 
 	/*记录日志*/
 	if err != nil{
+
+		var msg string
+		var code int
+
+		if errors.Is(err,sql.ErrNoRows){
+			code = 10002
+			msg = "未查询到用户信息。"
+		}else{
+			code = 10003
+			msg = "查询用户信息时发生错误。"
+		}
+
 		log.WriteErrorLog(err,c)
-		c.JSON(http.StatusOK,gin.H{"code":10001,"error":"未查询到用户信息。"})
+		c.JSON(http.StatusOK,gin.H{"code":code,"error":msg})
 		return
 	}
 
